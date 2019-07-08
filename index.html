@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>the super tiny vue</title>
+</head>
+<body>
+  <div id="app">
+    <div>{{ msg }}</div>
+    <button @click="change">change message</button>
+  </div>
+  <script src="./util.js"></script>
+  <script src="./vue.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./complier.js"></script>
+  <script>
+    var options = {
+      el: "#app",
+      data: {
+        msg: "Hello World"
+      },
+      methods: {
+        change: function() {
+          this.msg = "Hello World !!";
+        }
+      }
+    };
+
+    var vm = new Vue(options);
+  </script>
+</body>
+</html>
